@@ -1,0 +1,97 @@
+.editor {
+.manage_external_sites {
+  a.add {
+    @include plus-circled-icon;
+    @include icon-button;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  ul.sites {
+    margin-top: 10px;
+  }
+
+  ul.sites > li {
+    @include right-open-icon;
+    @include background-icon-right($color: #888, $top: 20px);
+
+    background-color: #fff;
+    margin-bottom: 2px;
+    padding: 37px 10px 0 70px;
+    white-space: nowrap;
+    overflow: hidden;
+    height: 23px;
+  }
+
+  .thumbnail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    background-size: cover;
+    background-color: #444;
+  }
+
+  a.select {
+    @include button(#590);
+
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+
+    position: absolute;
+    top: 3px;
+    left: 70px;
+  }
+}
+
+.external_links_site_reference_input {
+  .add_reference {
+    @include plus-circled-icon;
+    @include icon-button;
+  }
+
+  ul.sites {
+    margin-bottom: 10px;
+  }
+
+  a.remove {
+    @include icon-only-button(#aaa);
+    @include trash-icon;
+    position: absolute;
+    right: 4px;
+    top: 4px;
+  }
+
+  a.edit {
+    @include icon-only-button(#aaa);
+    @include pencil-icon;
+    position: absolute;
+    right: 40px;
+    top: 4px;
+  }
+
+  .external_links_site_reference {
+    margin-bottom: 2px;
+
+    > a:first-child {
+      padding-left: 45px;
+      cursor: default;
+    }
+
+    .thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 35px;
+      width: 35px;
+      cursor: move;
+      background-size: cover;
+      background-color: #444;
+    }
+  }
+}
+}

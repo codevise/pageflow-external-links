@@ -1,0 +1,167 @@
+@include pageflow-page-type(external_links);
+
+.external-links-page {
+
+  .ext-links {
+    height: 400px;
+    pointer-events: all;
+    position: relative;
+    @include transition(opacity 0.5s);
+
+    .hideText & {
+      @include transform(translate(-100%,0));
+    }
+
+    @include phone {
+      height: auto;
+    }
+  }
+
+  .arrow-forward, .arrow-back {
+    position: relative;
+    top: 100%;
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    pointer-events: all;
+
+    &:before {
+      content: "\f105";
+      font-family: "FontAwesome";
+      color: white;
+      width: 100%;
+      position: absolute;
+      height: 100%;
+      text-align: center;
+      line-height: 80px;
+      font-size: 80px;
+      opacity: 0.9;
+      text-shadow: 2px 2px 7px black, -1px -1px 7px black;
+      @include transition(opacity 0.3s);
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+
+    .invert & {
+      &:before {
+        color: black;
+        text-shadow: 2px 2px 7px black, -1px -1px 7px white;
+      }
+    }
+
+
+    @include phone {
+      display: none !important;
+    }
+  }
+
+  .arrow-back {
+
+    &:before {
+      content: "\f104";
+    }
+  }
+  .arrow-forward {
+    float: right;
+  }
+
+  #horizontal_scroller {
+    position: absolute;
+    text-align: center;
+
+    .js & {
+      white-space: nowrap;
+
+      @include phone {
+        white-space: normal;
+        position: relative;
+      }
+    }
+
+    @include phone {
+      white-space: normal;
+      position: relative;
+    }
+  }
+
+  .link-item {
+    display: inline-block;
+    width: 24%;
+    width: 250px;
+    background-color: rgb(20,20,20);
+    background-color: rgba(20,20,20, 0.8);
+    vertical-align: top;
+    max-height: 400px;
+    height: 400px;
+    overflow: hidden;
+    text-align: left;
+    margin-right: 10px;
+    text-decoration: none;
+    color: white;
+    @include transition(0.3s);
+
+    &:hover {
+      text-decoration: underline;
+      background-color: rgba(20,20,20, 1);
+      @include transform(scale(1.05));
+
+      @include phone {
+        @include transform(scale(1));
+      }
+    }
+    @include phone {
+      width: 230px;
+      margin-right: 0;
+      margin-bottom: 10px;
+      height: 290px;
+      max-height: 290px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    &:last-child {
+    }
+
+    .link-thumbnail {
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      padding-top: 56.25%;
+      position: relative;
+
+      .file_thumbnail {
+        background-size: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .link-details {
+      margin: 20px;
+      text-decoration: none;
+      color: #fff;
+
+      p {
+        width: 100%;
+        white-space: normal;
+        line-height: 1.3em;
+      }
+
+      .link-title {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-overflow: ellipsis;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+}
