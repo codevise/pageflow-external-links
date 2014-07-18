@@ -17,7 +17,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "pageflow"
 
   # Using translations from rails locales in javascript code.
-  spec.add_dependency 'i18n-js'
+  spec.add_runtime_dependency 'i18n-js'
 
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "rake"
