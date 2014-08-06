@@ -2,6 +2,6 @@
   <div class="link-thumbnail image_file_link_thumbnail_large_<%= site.thumbnail %>"></div>
   <div class="link-details">
     <p class="link-title"><%= site.title %></p>
-    <p class="link-description"><%= site.description %></p>
+    <p class="link-description"><%= raw(site.description) %></p>
   </div>
 <% end %>
