@@ -6,7 +6,7 @@ Page type to display links to external pages.
 
 Add this line to your application's `Gemfile`:
 
-    gem 'pagflow-external-links'
+    gem 'pageflow-external-links'
 
 Register the page type inside the configure block in `config/initializers/pageflow.rb`
 
