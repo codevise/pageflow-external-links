@@ -135,7 +135,7 @@ pageflow.pageType.register('external_links', _.extend({
       '.ext-links': {
         view: pageflow.externalLinks.ListEmbeddedView,
         options: {propertyName: 'linked_external_site_perma_ids'}
-      },
+      }
     };
-  },
+  }
 }, pageflow.commonPageCssClasses));

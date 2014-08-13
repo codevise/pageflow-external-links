@@ -16,14 +16,17 @@ Register the page type inside the configure block in `config/initializers/pagefl
 
 Include javascripts and stylesheets:
 
-    # app/assets/javascripts/application.js
-    //= require "pageflow/external_links"
+    # app/assets/javascripts/pageflow/application.js
+    //= require pageflow/external_links
 
     # app/assets/javascripts/pageflow/editor.js
     //= require pageflow/external_links/editor
 
-    # app/assets/stylesheets/application.scss.css
+    # app/assets/stylesheets/pageflow/application.scss.css
     @import "pageflow/external_links";
+
+    # app/assets/stylesheets/pageflow/editor.scss.css
+    @import "pageflow/external_links/editor";
 
 Mount the routes in `config/routes.rb`:
 
@@ -37,7 +40,7 @@ Install dependencies:
 
 Copy migrations of pageflow-external-links into your project:
 
-    bundle exec rake pageflow-external-links_engine:install:migrations
+    bundle exec rake pageflow_external_links:install:migrations
 
 Migrate the database:
 
