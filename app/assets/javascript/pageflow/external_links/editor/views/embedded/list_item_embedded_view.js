@@ -21,10 +21,16 @@ pageflow.externalLinks.ListItemEmbeddedView = Backbone.Marionette.ItemView.exten
     this.ui.title.text(site.get('title'));
     this.ui.description.html(site.get('description'));
 
+    this.$el.toggleClass('no_text', blank(site.get('title')) && blank(site.get('description')));
+
     this.$el.attr('href', site.get('url'));
     this.$el.attr('blank', site.get('open_in_new_tab') ? '_blank' : null);
 
     this.updateThumbnailView(site);
+
+    function blank(text) {
+      return !text || text.replace(/\s+/g, '').replace(/&nbsp;/g, '') === '';
+    }
   },
 
   updateThumbnailView: function(site) {

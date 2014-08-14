@@ -104,6 +104,14 @@
     color: white;
     @include transition(0.3s);
 
+    &.no_text {
+      height: auto;
+
+      .link-details {
+        display: none;
+      }
+    }
+
     &:hover {
       text-decoration: underline;
       background-color: rgba(20,20,20, 1);

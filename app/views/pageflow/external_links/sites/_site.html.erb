@@ -1,4 +1,7 @@
-<%= link_to(site.url, class: 'link-item', target: site.open_in_new_tab? ? '_blank' : nil) do %>
+<%= link_to(site.url,
+            class: external_links_site_css_class(site),
+            target: site.open_in_new_tab? ? '_blank' : nil) do %>
+
   <div class="link-thumbnail image_file_link_thumbnail_large_<%= site.thumbnail %>"></div>
   <div class="link-details">
     <p class="link-title"><%= site.title %></p>
