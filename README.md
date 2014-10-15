@@ -24,10 +24,10 @@ Include javascripts and stylesheets:
     # app/assets/javascripts/pageflow/editor.js
     //= require pageflow/external_links/editor
 
-    # app/assets/stylesheets/pageflow/application.scss.css
+    # app/assets/stylesheets/pageflow/application.css.scss
     @import "pageflow/external_links";
 
-    # app/assets/stylesheets/pageflow/editor.scss.css
+    # app/assets/stylesheets/pageflow/editor.css.scss
     @import "pageflow/external_links/editor";
 
 Mount the routes in `config/routes.rb`:
