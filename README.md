@@ -24,10 +24,10 @@ Include javascripts and stylesheets:
     # app/assets/javascripts/pageflow/editor.js
     //= require pageflow/external_links/editor
 
-    # app/assets/stylesheets/pageflow/application.scss.css
+    # app/assets/stylesheets/pageflow/application.css.scss
     @import "pageflow/external_links";
 
-    # app/assets/stylesheets/pageflow/editor.scss.css
+    # app/assets/stylesheets/pageflow/editor.css.scss
     @import "pageflow/external_links/editor";
 
 Mount the routes in `config/routes.rb`:
@@ -49,3 +49,11 @@ Migrate the database:
     bundle exec rake db:migrate
 
 Restart the application server.
+
+## Troubleshooting
+
+If you run into problems while installing the page type, please also refer to the
+[Troubleshooting](https://github.com/codevise/pageflow/wiki/Troubleshooting) wiki 
+page in the [Pageflow  repository](https://github.com/codevise/pageflow). If that 
+doesn't help, consider 
+[filing an issue](https://github.com/codevise/pageflow-before-after/issues).
