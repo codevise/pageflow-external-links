@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "pageflow-external-links"
-  spec.version       = "0.0.1"
+  spec.version       = "0.1.0"
   spec.authors       = ["Tim Fischbach"]
   spec.email         = ["tfischbach@codevise.de"]
   spec.summary       = "Pageflow Page Type for links to external sites"
