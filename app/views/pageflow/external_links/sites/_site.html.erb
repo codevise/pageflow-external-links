@@ -2,7 +2,7 @@
             class: external_links_site_css_class(site),
             target: site.open_in_new_tab? ? '_blank' : nil) do %>
 
-  <div class="link-thumbnail image_file_link_thumbnail_large_<%= site.thumbnail %>"></div>
+  <%= content_tag(:div, '', class: external_links_site_thumbnail_css_class(site)) %>
   <div class="link-details">
     <p class="link-title"><%= site.title %></p>
     <p class="link-description"><%= raw(site.description) %></p>
