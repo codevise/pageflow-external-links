@@ -1,0 +1,22 @@
+en:
+  activerecord:
+    attributes:
+      page:
+        linked_external_site_perma_ids: External pages
+      pageflow/page:
+        linked_external_site_perma_ids: External pages
+      site:
+        description: Description
+        open_in_new_tab: Open in new tab
+        thumbnail: Posterimage
+        title: Title
+        url: URL
+  editor:
+    inline_help:
+      site:
+        description: ! 'Suggested text length: 220 chars'
+        thumbnail: ! 'Suggested aspect ratio: 16:9'
+  pageflow:
+    external_links:
+      manage_sites: Manage external pages
+      page_type_name: External pages
