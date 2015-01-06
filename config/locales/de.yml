@@ -1,22 +1,24 @@
 de:
   activerecord:
     attributes:
-      page:
-        linked_external_site_perma_ids: Externe Seiten
-      pageflow/page:
-        linked_external_site_perma_ids: Externe Seiten
-      site:
+      pageflow/external_links/site:
         description: Beschreibung
         open_in_new_tab: In neuem Tab öffnen
         thumbnail: Teaserbild
         title: Titel
         url: Ziel URL
-  editor:
-    inline_help:
-      site:
-        description: ! 'Empfohlene Textlänge: bis zu 220 Zeichen'
-        thumbnail: ! 'Empfohlenes Seitenverhältnis: 16:9'
+      pageflow/page:
+        linked_external_site_perma_ids: Externe Seiten
   pageflow:
     external_links:
       manage_sites: Externe Verweise verwalten
+      page_type_description: Ermöglicht die Verlinkung von externen Seiten mit einem Vorschaubild und Beschreibungstext. Eignet sich z.B. sehr gut für die Darstellung weiterführender Informationen am Ende eines Pageflows.
+      page_type_help_entry:
+        body_html: Dieser Seitenty erlaubt die Verlinkung von externen Seiten mit einem Vorschaubild und Beschreibungstext. Er eignet sich z.B. sehr gut für die Darstellung weiterführender Informationen am Ende eines Pageflows.
+        title: ! 'Externe Verweise Seitentyp: Inhalte optisch ansprechend abrunden'
       page_type_name: Externe-Verweise
+    ui:
+      inline_help:
+        site:
+          description: ! 'Empfohlene Textlänge: bis zu 220 Zeichen'
+          thumbnail: ! 'Empfohlenes Seitenverhältnis: 16:9'
