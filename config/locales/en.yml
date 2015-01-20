@@ -1,0 +1,24 @@
+en:
+  activerecord:
+    attributes:
+      pageflow/external_links/site:
+        description: Description
+        open_in_new_tab: Open in new tab
+        thumbnail: Posterimage
+        title: Title
+        url: URL
+      pageflow/page:
+        linked_external_site_perma_ids: External pages
+  pageflow:
+    external_links:
+      manage_sites: Manage external pages
+      page_type_description: ! 'Use this pagetype to add nice links-boxes with a preview image and description text. '
+      page_type_help_entry:
+        body_html: ! 'Use this pagetype to add nice links-boxes with a preview image and description text. '
+        title: ! 'External Links: Round off your story with further readings'
+      page_type_name: External pages
+    ui:
+      inline_help:
+        site:
+          description: ! 'Suggested text length: 220 chars'
+          thumbnail: ! 'Suggested aspect ratio: 16:9'

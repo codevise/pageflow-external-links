@@ -57,3 +57,9 @@ If you run into problems while installing the page type, please also refer to th
 page in the [Pageflow  repository](https://github.com/codevise/pageflow). If that 
 doesn't help, consider 
 [filing an issue](https://github.com/codevise/pageflow-external-links/issues).
+
+---
+
+## Contributing locales to pageflow-external-links
+
+- Edit the translations directly on the [pageflow-external-links](http://www.localeapp.com/projects/public?search=pageflow-external-links) project on Locale.

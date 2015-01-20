@@ -1,7 +1,7 @@
 pageflow.externalLinks.Site = Backbone.Model.extend({
   modelName: 'site',
   paramRoot: 'site',
-  i18nKey: 'site',
+  i18nKey: 'pageflow/external_links/site',
 
   mixins: [pageflow.failureTracking, pageflow.transientReferences],
 
