@@ -38,7 +38,7 @@ pageflow.externalLinks.SiteItemView = Backbone.Marionette.ItemView.extend({
   },
 
   update: function() {
-    this.ui.title.text(this.model.get('title') || '(Unbenannt)');
+    this.ui.title.text(this.model.get('title') || I18n.t('pageflow.external_links.editor.views.site_item_view.unknown'));
     this.ui.selectButton.toggle(!!this.options.selectionHandler);
   }
 });

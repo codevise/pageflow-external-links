@@ -27,6 +27,6 @@ pageflow.externalLinks.SiteReferenceItemView = Backbone.Marionette.ItemView.exte
       model: this.model.get('site').getThumbnail()
     }));
 
-    this.ui.title.text(this.model.get('site').get('title') || '(Unbenannt)');
+    this.ui.title.text(this.model.get('site').get('title') || I18n.t('pageflow.external_links.editor.views.site_item_reference_view.unknown'));
   },
 });
