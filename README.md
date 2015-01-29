@@ -61,5 +61,5 @@ doesn't help, consider
 ## Contributing Locales
 
 Edit the translations directly on the
-[pageflow-external-links](http://www.localeapp.com/projects/public?search=pageflow-external-links)
+[pageflow-external-links](http://www.localeapp.com/projects/public?search=tf/pageflow-external-links)
 locale project.

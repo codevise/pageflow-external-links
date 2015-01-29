@@ -11,14 +11,77 @@ de:
         linked_external_site_perma_ids: Externe Seiten
   pageflow:
     external_links:
+      editor:
+        templates:
+          edit_site:
+            back: Externe Verweise
+            destroy: Löschen
+            failure: Beim Speichern des externen Verweises ist ein Problem aufgetreten.
+            retry: Erneut versuchen
+          embedded:
+            list_item:
+              open_in_new_tab: Seite in neuem Tab ansehen
+              open_in_new_tab_message: Öffnen im selben Tab ist im Editor deaktiviert.
+          inputs:
+            site_reference:
+              add: Hinzufügen
+          site_item:
+            failure: Beim Speichern der Seite ist ein Fehler aufgetreten.
+            select: Auswählen
+          site_reference_item:
+            edit: Bearbeiten
+            remove: Löschen
+          sites:
+            add: Hinzufügen
+          sites_blank_slate:
+            text: Es wurden noch keine Seiten erstellt.
+        views:
+          edit_site:
+            back: Zurück
+            confirm_destroy: ! 'Externen Verweis wirklich löschen?
+
+
+              Alle Benutzungen dieses Verweises auf Seiten werden ebenfalls entfernt. Dieser Schritt kann nicht rückgängig gemacht werden.'
+          site_item_reference_view:
+            unknown: (Unbenannt)
+          site_item_view:
+            unknown: (Unbenannt)
+      help_entries:
+        page_type:
+          menu_item: Externe Verweise
+          text: ! '# Externe Verweise
+
+
+            Sammlung von Verweisen zu Webseiten ausserhalb des Pageflows
+
+
+            Zu dem üblichen Hintergrund-Bild können hier Verweise auf externe Webseiten
+
+            eingebunden werden, die sich bei Klick in einem neuen Browserfenster öffnen. Pro
+
+            Verweis kann jeweils ein Bild, ein Titel und eine Beschreibung verwendet werden.
+
+            Achtung: Mit jedem Verweis auf eine externe Webseite riskierst Du, dass User
+
+            möglicherweise aus Deinem Pageflow aussteigen bzw. von dem neu geöffneten Fenster
+
+            nicht zurückkehren. Erfahrungsgemäß empfiehlt sich daher die Verwendung solcher Links
+
+            eher im hinteren Teil Deines Pageflows.
+
+
+            Typische Anwendungsbeispiele: Vertiefungen, Quellen, Twitter- und Facebook-Feeds, Backlinks zur Homepage'
+        sites:
+          menu_item: Externe Verweise verwalten
+          text: ! "# Externe Verweise verwalten\n\nMit „Externe Verweise“ verwaltest Du Links auf Webseiten, die Du in eine Reportage einbinden möchtest. Hierzu kannst Du sowohl Bilder als „Teaser“, als auch Infotext zur Beschreibung des Verweises benutzen.\n\nDiese Verweise werden vom Seitentyp „Externe Verweise“ verwendet.\nDer Verwendung externer Links bietet sich beispielsweise an, um bestimmte Themen weiter zu vertiefen. \n\nBeachte bitte, dass diese Links eher zum Ende eines Pageflows eingesetzt werden sollten, da sie die Möglichkeit eines vorzeitigen Ausstieges aus der Reportage anbieten."
       manage_sites: Externe Verweise verwalten
-      page_type_description: Ermöglicht die Verlinkung von externen Seiten mit einem Vorschaubild und Beschreibungstext. Eignet sich z.B. sehr gut für die Darstellung weiterführender Informationen am Ende eines Pageflows.
+      page_type_category_name: Verweise
+      page_type_description: Sammlung von Verweisen zu Webseiten außerhalb des Pageflows
       page_type_help_entry:
-        body_html: Dieser Seitenty erlaubt die Verlinkung von externen Seiten mit einem Vorschaubild und Beschreibungstext. Er eignet sich z.B. sehr gut für die Darstellung weiterführender Informationen am Ende eines Pageflows.
         title: ! 'Externe Verweise Seitentyp: Inhalte optisch ansprechend abrunden'
       page_type_name: Externe-Verweise
     ui:
       inline_help:
-        site:
+        pageflow/external_links/site:
           description: ! 'Empfohlene Textlänge: bis zu 220 Zeichen'
           thumbnail: ! 'Empfohlenes Seitenverhältnis: 16:9'

@@ -44,14 +44,14 @@ pageflow.externalLinks.EditSiteView = Backbone.Marionette.Layout.extend({
     });
 
     if (this.options.returnTo === 'page' && this.options.page) {
-      this.ui.backButton.text('Zurück');
+      this.ui.backButton.text(I18n.t('pageflow.external_links.editor.views.edit_site.back'));
     }
 
     this.formContainer.show(configurationEditor);
   },
 
   destroy: function() {
-    if (confirm("Externen Verweis wirklich löschen?\n\nAlle Benutzungen dieses Verweises auf Seiten werden ebenfalls entfernt. Dieser Schritt kann nicht rückgängig gemacht werden.")) {
+    if (confirm(I18n.t('pageflow.external_links.editor.views.edit_site.confirm_destroy'))) {
       this.model.destroy();
       this.goBack();
     }
