@@ -7,7 +7,30 @@ pageflow.externalLinks.ListItemEmbeddedView = Backbone.Marionette.ItemView.exten
   ui: {
     title: '.link-title',
     description: '.link-description',
-    thumbnail: '.link-thumbnail'
+    thumbnail: '.link-thumbnail',
+    tooltip: '.tooltip'
+  },
+
+  events: {
+    'click': function(event) {
+      if (event.currentTarget.target) {
+        event.stopPropagation();
+      }
+      else {
+        this.ui.tooltip.show();
+        return false;
+      }
+    },
+
+    'mouseleave': function() {
+      this.ui.tooltip.hide();
+    },
+
+    'click .tooltip': function() {
+      window.open(this.$el.attr('href'), '_blank');
+      this.ui.tooltip.hide();
+      return false;
+    }
   },
 
   onRender: function() {
@@ -20,11 +43,12 @@ pageflow.externalLinks.ListItemEmbeddedView = Backbone.Marionette.ItemView.exten
 
     this.ui.title.text(site.get('title'));
     this.ui.description.html(site.get('description'));
+    this.ui.tooltip.hide();
 
     this.$el.toggleClass('no_text', blank(site.get('title')) && blank(site.get('description')));
 
     this.$el.attr('href', site.get('url'));
-    this.$el.attr('blank', site.get('open_in_new_tab') ? '_blank' : null);
+    this.$el.attr('target', site.get('open_in_new_tab') ? '_blank' : null);
 
     this.updateThumbnailView(site);
 
