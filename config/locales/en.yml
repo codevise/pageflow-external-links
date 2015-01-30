@@ -76,7 +76,7 @@ en:
       page_type_description: Allows linking to external websites with a thumbnail and description text.
       page_type_help_entry:
         title: ! 'External Links: Round off your story with further readings'
-      page_type_name: External pages
+      page_type_name: External Links
     ui:
       inline_help:
         pageflow/external_links/site:
