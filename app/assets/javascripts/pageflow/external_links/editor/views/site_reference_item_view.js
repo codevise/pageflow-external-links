@@ -24,7 +24,7 @@ pageflow.externalLinks.SiteReferenceItemView = Backbone.Marionette.ItemView.exte
   onRender: function() {
     this.subview(new pageflow.FileThumbnailView({
       el: this.ui.thumbnail,
-      model: this.model.get('site').getThumbnail()
+      model: this.model.get('site').thumbnailFile()
     }));
 
     this.ui.title.text(this.model.get('site').get('title') || I18n.t('pageflow.external_links.editor.views.site_item_reference_view.unknown'));
