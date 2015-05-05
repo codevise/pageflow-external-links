@@ -10,3 +10,7 @@
 //= require ./editor/config
 
 pageflow.externalLinks = pageflow.externalLinks || {};
+
+pageflow.externalLinks.selectSite = function() {
+  return pageflow.externalLinks.SiteSelectionView.selectSite();
+};
