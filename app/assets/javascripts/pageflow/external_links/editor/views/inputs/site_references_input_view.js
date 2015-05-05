@@ -1,8 +1,8 @@
-pageflow.externalLinks.SiteReferenceInputView = Backbone.Marionette.ItemView.extend({
+pageflow.externalLinks.SiteReferencesInputView = Backbone.Marionette.ItemView.extend({
   mixins: [pageflow.inputView],
 
   template: 'pageflow/external_links/editor/templates/inputs/site_reference',
-  className: 'external_links_site_reference_input',
+  className: 'external_links_site_references_input',
 
   ui: {
     sites: 'ul.sites'

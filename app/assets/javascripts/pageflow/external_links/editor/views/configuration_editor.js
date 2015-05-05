@@ -13,7 +13,7 @@ pageflow.ConfigurationEditorView.register('external_links', {
     });
 
     this.tab('links', function() {
-      this.input('linked_external_site_perma_ids', pageflow.externalLinks.SiteReferenceInputView);
+      this.input('linked_external_site_perma_ids', pageflow.externalLinks.SiteReferencesInputView);
     });
 
     this.tab('options', function() {
