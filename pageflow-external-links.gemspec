@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tim Fischbach"]
   spec.email         = ["tfischbach@codevise.de"]
   spec.summary       = "Pageflow Page Type for links to external sites"
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/codevise/pageflow-external-links"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
