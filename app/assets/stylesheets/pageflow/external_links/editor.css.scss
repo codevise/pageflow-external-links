@@ -1,56 +1,20 @@
 @import "./editor/embedded";
+@import "./editor/site_selection";
 
 .editor {
-.manage_external_sites {
-  a.add {
-    @include plus-circled-icon;
-    @include icon-button;
-    position: absolute;
-    top: 0;
-    right: 0;
+  @import "./editor/external_sites";
+
+  .manage_external_sites {
+    a.add {
+      @include plus-circled-icon;
+      @include icon-button;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 
-  ul.sites {
-    margin-top: 10px;
-  }
-
-  ul.sites > li {
-    @include right-open-icon;
-    @include background-icon-right($color: #888, $top: 20px);
-
-    background-color: #fff;
-    margin-bottom: 2px;
-    padding: 37px 10px 0 70px;
-    white-space: nowrap;
-    overflow: hidden;
-    height: 23px;
-  }
-
-  .thumbnail {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 60px;
-    width: 60px;
-    vertical-align: middle;
-    background-size: cover;
-    background-color: #444;
-  }
-
-  a.select {
-    @include button(#590);
-
-    padding-left: 5px;
-    padding-right: 5px;
-    vertical-align: middle;
-
-    position: absolute;
-    top: 3px;
-    left: 70px;
-  }
-}
-
-.external_links_site_reference_input {
+.external_links_site_references_input {
   .add_reference {
     @include plus-circled-icon;
     @include icon-button;

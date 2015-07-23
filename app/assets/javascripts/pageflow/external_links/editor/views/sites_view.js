@@ -19,10 +19,11 @@ pageflow.externalLinks.SitesView = Backbone.Marionette.ItemView.extend({
 
     this.$el.append(this.subview(new pageflow.CollectionView({
       tagName: 'ul',
-      className: 'sites',
+      className: 'external_sites',
       collection: pageflow.externalLinks.sites,
       itemViewConstructor: pageflow.externalLinks.SiteItemView,
       itemViewOptions: {
+        navigatable: true,
         selectionHandler: this.options.selectionHandler,
         referer: this.options.referer,
         page: this.options.page

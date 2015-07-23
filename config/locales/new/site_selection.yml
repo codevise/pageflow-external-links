@@ -1,0 +1,8 @@
+de:
+  pageflow:
+    external_links:
+      editor:
+        templates:
+          site_selection:
+            cancel: "Abbrechen"
+            title: "Externe Seite auswählen"

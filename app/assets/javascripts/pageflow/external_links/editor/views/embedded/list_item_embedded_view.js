@@ -58,7 +58,7 @@ pageflow.externalLinks.ListItemEmbeddedView = Backbone.Marionette.ItemView.exten
   },
 
   updateThumbnailView: function(site) {
-    var thumbnail = site.getThumbnail();
+    var thumbnail = site.thumbnailFile();
 
     if (this.currentThumbnail !== thumbnail) {
       this.currentThumbnail = thumbnail;

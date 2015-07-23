@@ -14,4 +14,5 @@ pageflow.editor.registerMainMenuItem({
 
 pageflow.editor.addInitializer(function() {
   pageflow.externalLinks.sites = new pageflow.externalLinks.SitesCollection();
+  pageflow.externalLinks.sites.ensureFetched();
 });

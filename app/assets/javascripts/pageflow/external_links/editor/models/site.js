@@ -19,7 +19,11 @@ pageflow.externalLinks.Site = Backbone.Model.extend({
     return this.isNew() ? this.collection.url() : '/external_links/sites';
   },
 
-  getThumbnail: function() {
+  thumbnailFile: function() {
     return this.getReference('thumbnail', pageflow.imageFiles);
+  },
+
+  title: function() {
+    return this.get('title');
   }
 });

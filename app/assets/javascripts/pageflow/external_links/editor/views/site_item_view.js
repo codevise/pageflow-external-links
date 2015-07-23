@@ -12,7 +12,7 @@ pageflow.externalLinks.SiteItemView = Backbone.Marionette.ItemView.extend({
 
   events: {
     'click': function() {
-      if (!this.model.isNew()) {
+      if (!this.model.isNew() && this.options.navigatable) {
         var query = this.options.page ? '/?page=' + this.options.page.id + '&return_to=sites' : '';
         pageflow.editor.navigate('/external_links/sites/' + this.model.get('id') + query, {trigger: true});
       }
@@ -22,7 +22,10 @@ pageflow.externalLinks.SiteItemView = Backbone.Marionette.ItemView.extend({
     'click .select': function() {
       if (this.options.selectionHandler) {
         this.options.selectionHandler.call(this.model);
-        pageflow.editor.navigate(this.options.referer, {trigger: true});
+
+        if (this.options.referer) {
+          pageflow.editor.navigate(this.options.referer, {trigger: true});
+        }
       }
       return false;
     }
@@ -38,6 +41,8 @@ pageflow.externalLinks.SiteItemView = Backbone.Marionette.ItemView.extend({
   },
 
   update: function() {
+    this.$el.toggleClass('navigatable', !!this.options.navigatable);
+
     this.ui.title.text(this.model.get('title') || I18n.t('pageflow.external_links.editor.views.site_item_view.unknown'));
     this.ui.selectButton.toggle(!!this.options.selectionHandler);
   }
