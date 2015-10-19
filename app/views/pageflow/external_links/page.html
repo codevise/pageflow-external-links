@@ -25,8 +25,8 @@
               <%= render Pageflow::ExternalLinks::Site.from_perma_ids(@entry.try(:revision), configuration['linked_external_site_perma_ids']) %>
             </div>
           </div>
-          <a href="#" class="arrow-forward"><span class="hint">Vorwärts</span></a>
-          <a href="#" class="arrow-back"><span class="hint">Zurück</span></a>
+          <a href="#" class="arrow-forward"><span class="hint"><%= t('pageflow.public.forward') %></span></a>
+          <a href="#" class="arrow-back"><span class="hint"><%= t('pageflow.public.back') %></span></a>
         </div>
       </div>
     </div>
