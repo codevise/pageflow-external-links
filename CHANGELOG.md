@@ -2,6 +2,10 @@
 
 ### Changes on `master`
 
+None so far.
+
+### 0.3.0
+
 - Site reference input and site selection api.
   ([#15](https://github.com/codevise/pageflow-external-links/pull/15))
 
