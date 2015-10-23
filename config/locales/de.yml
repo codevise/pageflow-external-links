@@ -31,6 +31,9 @@ de:
           site_reference_item:
             edit: Bearbeiten
             remove: Löschen
+          site_selection:
+            cancel: Abbrechen
+            title: Externe Seite auswählen
           sites:
             add: Hinzufügen
           sites_blank_slate:
