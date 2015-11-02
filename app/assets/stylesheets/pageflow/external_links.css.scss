@@ -9,7 +9,7 @@
     @include transition(opacity 0.5s);
 
     .hideText & {
-      @include transform(translate(-100%,0));
+      @include transform(translate(-100%, 0));
     }
 
     @include phone {
@@ -53,7 +53,6 @@
       }
     }
 
-
     @include phone {
       display: none !important;
     }
@@ -91,10 +90,9 @@
   .link-item {
     display: inline-block;
     position: relative;
-    width: 24%;
     width: 250px;
-    background-color: rgb(20,20,20);
-    background-color: rgba(20,20,20, 0.8);
+    background-color: rgb(20, 20, 20);
+    background-color: rgba(20, 20, 20, 0.8);
     vertical-align: top;
     max-height: 400px;
     height: 400px;
@@ -115,7 +113,7 @@
 
     &:hover {
       text-decoration: underline;
-      background-color: rgba(20,20,20, 1);
+      background-color: rgba(20, 20, 20, 1);
       @include transform(scale(1.05));
 
       @include phone {
@@ -124,7 +122,6 @@
     }
     @include phone {
       width: 230px;
-      margin-right: 0;
       margin-bottom: 10px;
       height: 290px;
       max-height: 290px;
