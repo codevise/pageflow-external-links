@@ -4,6 +4,7 @@
 .bundle
 .config
 .yardoc
+.idea
 InstalledFiles
 _yardoc
 coverage
