@@ -9,7 +9,7 @@ pageflow.pageType.register('external_links', _.extend({
         innerScroller = pageElement.find('#horizontal_scroller'),
         contentWrapper = pageElement.find('.contentWrapper');
 
-    this.scroller = new IScroll(scrollerElement[0], {
+    this.linkScroller = new IScroll(scrollerElement[0], {
       mouseWheel: true,
       bounce: false,
       keyBindings: true,
@@ -19,68 +19,68 @@ pageflow.pageType.register('external_links', _.extend({
       eventPassthrough: true
     });
 
-    this.scroller.checkDisable = function() {
+    this.linkScroller.checkDisable = function() {
       that._checkForIScroll(scrollerElement, innerScroller, pageElement.find('.arrow-forward'), pageElement.find('.arrow-back'), pageElement);
     };
-    scrollerElement.data('scroller', this.scroller);
+    scrollerElement.data('scroller', this.linkScroller);
 
-    that.scroller.on('scroll', function() {
-      that.scroller.checkDisable();
+    that.linkScroller.on('scroll', function() {
+      that.linkScroller.checkDisable();
     });
 
     /* Arrows for Gallery */
 
     pageElement.find('.arrow-back').on('click', function(e) {
-      var nextElement = Math.round((that.scroller.x / -260) - (scrollerElement.width() / 260 / 2), 10);
+      var nextElement = Math.round((that.linkScroller.x / -260) - (scrollerElement.width() / 260 / 2), 10);
       if (nextElement <= 1) {
-        that.scroller.scrollTo(0, 0, 500, IScroll.ease.quadratic);
+        that.linkScroller.scrollTo(0, 0, 500, IScroll.ease.quadratic);
       }
       else {
-        that.scroller.scrollToElement($(".page.active #horizontal_scroller a")[nextElement], 500, 0, 0, IScroll.ease.quadratic);
+        that.linkScroller.scrollToElement($(".page.active #horizontal_scroller a")[nextElement], 500, 0, 0, IScroll.ease.quadratic);
       }
-      that.scroller.checkDisable();
+      that.linkScroller.checkDisable();
       e.stopPropagation();
       return false;
     });
 
     pageElement.find('.arrow-forward').on('click', function(e) {
-      var nextElement = Math.round((that.scroller.x / -260) + (scrollerElement.width() / 260 / 2), 10);
+      var nextElement = Math.round((that.linkScroller.x / -260) + (scrollerElement.width() / 260 / 2), 10);
       if (nextElement == innerScroller.find('a').length - 1) {
-        that.scroller.scrollTo(that.scroller.maxScrollX, 0, 500, IScroll.ease.quadratic);
+        that.linkScroller.scrollTo(that.linkScroller.maxScrollX, 0, 500, IScroll.ease.quadratic);
       }
       else {
-        that.scroller.scrollToElement($(".page.active #horizontal_scroller a")[nextElement]);
+        that.linkScroller.scrollToElement($(".page.active #horizontal_scroller a")[nextElement]);
       }
-      that.scroller.checkDisable();
+      that.linkScroller.checkDisable();
       e.stopPropagation();
       return false;
     });
   },
 
   resize: function(pageElement, configuration) {
-    this.scroller.refresh();
-    this.scroller.checkDisable();
+    this.linkScroller.refresh();
+    this.linkScroller.checkDisable();
   },
 
   _checkForIScroll: function(outerElement, innerElement, arrowForward, arrowBack, pageElement) {
     if (pageElement.width() <= 700) {
-      this.scroller.disable();
+      this.linkScroller.disable();
     }
     else {
       if (innerElement.width() <= outerElement.width()) {
-        this.scroller.disable();
+        this.linkScroller.disable();
         arrowForward.css('display', 'none');
         arrowBack.css('display', 'none');
       }
       else {
-        this.scroller.enable();
-        if (this.scroller.x == this.scroller.maxScrollX) {
+        this.linkScroller.enable();
+        if (this.linkScroller.x == this.linkScroller.maxScrollX) {
           arrowForward.css('display', 'none');
         }
         else {
           arrowForward.css('display', 'block');
         }
-        if (this.scroller.x === 0) {
+        if (this.linkScroller.x === 0) {
           arrowBack.css('display', 'none');
         }
         else {
@@ -98,8 +98,8 @@ pageflow.pageType.register('external_links', _.extend({
   },
 
   activating: function(pageElement, configuration) {
-    this.scroller.refresh();
-    this.scroller.checkDisable();
+    this.linkScroller.refresh();
+    this.linkScroller.checkDisable();
   },
 
   activated: function(pageElement, configuration) {
@@ -122,8 +122,9 @@ pageflow.pageType.register('external_links', _.extend({
     pageElement.find('.shadow').css({
       opacity: configuration.get('gradient_opacity') / 100
     });
-    this.scroller.refresh();
-    this.scroller.checkDisable();
+
+    this.linkScroller.refresh();
+    this.linkScroller.checkDisable();
   },
 
   embeddedEditorViews: function() {
