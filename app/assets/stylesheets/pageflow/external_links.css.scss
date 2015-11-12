@@ -98,6 +98,7 @@
     display: inline-block;
     position: relative;
     width: 250px;
+    max-width: 250px;
     background-color: rgb(20, 20, 20);
     background-color: rgba(20, 20, 20, 0.8);
     vertical-align: top;
@@ -131,6 +132,7 @@
     }
     @include phone {
       width: 230px;
+      max-width: 230px;
       margin-bottom: 10px;
       margin-right: 5px;
       margin-left: 5px;
@@ -174,9 +176,7 @@
       .link-title {
         font-size: 1.2em;
         font-weight: bold;
-        text-overflow: ellipsis;
         width: 100%;
-        white-space: nowrap;
         overflow: hidden;
       }
     }
