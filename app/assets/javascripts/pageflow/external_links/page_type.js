@@ -22,6 +22,11 @@ pageflow.pageType.register('external_links', _.extend({
     this.linkScroller.checkDisable = function() {
       that._checkForIScroll(scrollerElement, innerScroller, pageElement.find('.arrow-forward'), pageElement.find('.arrow-back'), pageElement);
     };
+
+    this.linkScroller.updateHeight = function() {
+      that._adjustHeight(pageElement);
+    };
+
     scrollerElement.data('scroller', this.linkScroller);
 
     that.linkScroller.on('scroll', function() {
@@ -90,6 +95,15 @@ pageflow.pageType.register('external_links', _.extend({
     }
   },
 
+  _adjustHeight: function(pageElement) {
+    var element = pageElement.find('.ext-links');
+    var child = pageElement.find('.ext-links > div');
+
+    element.height(child.height());
+
+    this.scroller.refresh();
+  },
+
   prepare: function(pageElement, configuration) {
   },
 
@@ -103,6 +117,7 @@ pageflow.pageType.register('external_links', _.extend({
   },
 
   activated: function(pageElement, configuration) {
+    this._adjustHeight(pageElement);
   },
 
   deactivating: function(pageElement, configuration) {

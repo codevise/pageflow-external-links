@@ -10,6 +10,10 @@ pageflow.externalLinks.ListEmbeddedView = Backbone.Marionette.View.extend({
       this.refreshScroller();
     });
 
+    this.listenTo(pageflow.externalLinks.sites, 'change', function() {
+      this.$el.data('scroller').updateHeight();
+    });
+
     this.refreshScroller();
 
     return this;
@@ -18,5 +22,6 @@ pageflow.externalLinks.ListEmbeddedView = Backbone.Marionette.View.extend({
   refreshScroller: function() {
     this.$el.data('scroller').refresh();
     this.$el.data('scroller').checkDisable();
+    this.$el.data('scroller').updateHeight();
   }
 });

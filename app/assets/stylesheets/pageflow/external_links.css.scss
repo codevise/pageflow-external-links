@@ -3,7 +3,6 @@
 .external-links-page {
 
   .ext-links {
-    height: 400px;
     pointer-events: all;
     position: relative;
     @include transition(opacity 0.5s);
@@ -14,6 +13,14 @@
 
     @include phone {
       height: auto;
+    }
+
+    > div {
+      @include desktop {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 10px;
+      }
     }
   }
 
@@ -94,14 +101,16 @@
     background-color: rgb(20, 20, 20);
     background-color: rgba(20, 20, 20, 0.8);
     vertical-align: top;
-    max-height: 400px;
-    height: 400px;
     overflow: hidden;
     text-align: left;
     margin-right: 10px;
     text-decoration: none;
     color: white;
     @include transition(0.3s);
+
+    @include desktop {
+      display: table-cell;
+    }
 
     &.no_text {
       height: auto;
@@ -123,8 +132,6 @@
     @include phone {
       width: 230px;
       margin-bottom: 10px;
-      height: 290px;
-      max-height: 290px;
       margin-right: 5px;
       margin-left: 5px;
     }
@@ -135,9 +142,13 @@
     .link-thumbnail {
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100%;
       padding-top: 56.25%;
       position: relative;
+      width: 250px;
+
+      @include phone {
+        width: 230px;
+      }
 
       .file_thumbnail {
         background-size: cover;
