@@ -3,17 +3,24 @@
 .external-links-page {
 
   .ext-links {
-    height: 400px;
     pointer-events: all;
     position: relative;
     @include transition(opacity 0.5s);
 
     .hideText & {
-      @include transform(translate(-100%,0));
+      @include transform(translate(-100%, 0));
     }
 
     @include phone {
       height: auto;
+    }
+
+    > div {
+      @include desktop {
+        display: table;
+        border-collapse: separate;
+        border-spacing: 10px;
+      }
     }
   }
 
@@ -53,7 +60,6 @@
       }
     }
 
-
     @include phone {
       display: none !important;
     }
@@ -91,19 +97,21 @@
   .link-item {
     display: inline-block;
     position: relative;
-    width: 24%;
     width: 250px;
-    background-color: rgb(20,20,20);
-    background-color: rgba(20,20,20, 0.8);
+    max-width: 250px;
+    background-color: rgb(20, 20, 20);
+    background-color: rgba(20, 20, 20, 0.8);
     vertical-align: top;
-    max-height: 400px;
-    height: 400px;
     overflow: hidden;
     text-align: left;
     margin-right: 10px;
     text-decoration: none;
     color: white;
     @include transition(0.3s);
+
+    @include desktop {
+      display: table-cell;
+    }
 
     &.no_text {
       height: auto;
@@ -115,7 +123,7 @@
 
     &:hover {
       text-decoration: underline;
-      background-color: rgba(20,20,20, 1);
+      background-color: rgba(20, 20, 20, 1);
       @include transform(scale(1.05));
 
       @include phone {
@@ -124,10 +132,8 @@
     }
     @include phone {
       width: 230px;
-      margin-right: 0;
+      max-width: 230px;
       margin-bottom: 10px;
-      height: 290px;
-      max-height: 290px;
       margin-right: 5px;
       margin-left: 5px;
     }
@@ -138,9 +144,13 @@
     .link-thumbnail {
       background-repeat: no-repeat;
       background-size: cover;
-      width: 100%;
       padding-top: 56.25%;
       position: relative;
+      width: 250px;
+
+      @include phone {
+        width: 230px;
+      }
 
       .file_thumbnail {
         background-size: cover;
@@ -166,9 +176,7 @@
       .link-title {
         font-size: 1.2em;
         font-weight: bold;
-        text-overflow: ellipsis;
         width: 100%;
-        white-space: nowrap;
         overflow: hidden;
       }
     }
