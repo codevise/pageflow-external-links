@@ -1,3 +1,5 @@
+require 'pageflow-public-i18n'
+
 module Pageflow
   module ExternalLinks
     class Engine < Rails::Engine
@@ -15,5 +17,3 @@ module Pageflow
     end
   end
 end
-
-
