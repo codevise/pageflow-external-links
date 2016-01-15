@@ -1,1 +1,96 @@
+/// Typography settings for external link items.
+$external-links-item-typography: () !default;
+
+/// Color of the item's background.
+$external-links-item-background-color: rgba(20, 20, 20, 0.8) !default;
+
+/// Color of the item's background.
+$external-links-item-active-background-color: rgba(20, 20, 20, 1) !default;
+
+/// Color of the item's text.
+$external-links-item-text-color: #fff !default;
+
+/// Color of the item's text.
+$external-links-item-active-text-color: #fff !default;
+
+/// Typography settings for the title of external link items.
+$external-links-item-title-typography: () !default;
+
+/// Color of the item's title text.
+$external-links-item-title-color: null !default;
+
+/// Color of the title text when the item is hovered.
+$external-links-item-active-title-color: $external-links-item-title-color !default;
+
+/// Typography settings for the description text of external link
+/// items.
+$external-links-item-description-typography: () !default;
+
+/// Color of the item's description text.
+$external-links-item-description-color: null !default;
+
+/// Color of the description text when the item is hovered.
+$external-links-item-active-description-color: $external-links-item-description-color !default;
+
+/// Underline item text on hover.
+$external-links-item-hover-underline: true !default;
+
+/// Padding around the text inside an item.
+$external-links-item-padding: 20px !default;
+
 @include pageflow-page-type-pictograms("external_links");
+
+.external-links-page {
+  .link-item {
+    background-color: $external-links-item-background-color;
+    color: $external-links-item-text-color;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $external-links-item-active-background-color;
+      color: $external-links-item-active-text-color;
+
+      .link-title {
+        color: $external-links-item-active-title-color;
+
+        @if $external-links-item-hover-underline {
+          text-decoration: underline;
+        }
+      }
+
+      .link-description {
+        color: $external-links-item-active-description-color;
+      }
+    }
+
+    p {
+      @include typography(
+        $external-links-item-typography,
+        (
+          line-height: 1.3em
+        )
+      );
+    }
+  }
+
+  .link-details {
+    margin: $external-links-item-padding;
+  }
+
+  .link-title {
+    color: $external-links-item-title-color;
+    @include typography(
+      $external-links-item-title-typography,
+      (
+        font-size: 1.2em,
+        font-weight: bold,
+        margin-bottom: $external-links-item-padding
+      )
+    );
+  }
+
+  .link-description {
+    color: $external-links-item-description-color;
+    @include typography($external-links-item-description-typography);
+  }
+}
