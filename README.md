@@ -30,6 +30,9 @@ Include javascripts and stylesheets:
     # app/assets/stylesheets/pageflow/editor.css.scss
     @import "pageflow/external_links/editor";
 
+    # app/assets/stylesheets/pageflow/themes/default.css.scss
+    @import "pageflow/external_links/themes/default";
+
 Mount the routes in `config/routes.rb`:
 
     authenticated do
