@@ -4,6 +4,8 @@
 
 Page type to display links to external pages.
 
+* [Theme Settings](http://codevise.github.io/pageflow-external-links/theme/master/)
+
 ## Installation
 
 Add this line to your application's `Gemfile`:
