@@ -5,6 +5,7 @@
   .ext-links {
     pointer-events: all;
     position: relative;
+    margin-left: -10px;
     @include transition(opacity 0.5s);
 
     .hideText & {
@@ -29,7 +30,6 @@
     top: 100%;
     width: 80px;
     height: 80px;
-    text-decoration: none;
     pointer-events: all;
 
     &:before {
@@ -99,14 +99,10 @@
     position: relative;
     width: 250px;
     max-width: 250px;
-    background-color: rgb(20, 20, 20);
-    background-color: rgba(20, 20, 20, 0.8);
     vertical-align: top;
     overflow: hidden;
     text-align: left;
     margin-right: 10px;
-    text-decoration: none;
-    color: white;
     @include transition(0.3s);
 
     @include desktop {
@@ -122,8 +118,6 @@
     }
 
     &:hover {
-      text-decoration: underline;
-      background-color: rgba(20, 20, 20, 1);
       @include transform(scale(1.05));
 
       @include phone {
@@ -163,19 +157,12 @@
     }
 
     .link-details {
-      margin: 20px;
-      text-decoration: none;
-      color: #fff;
-
       p {
         width: 100%;
         white-space: normal;
-        line-height: 1.3em;
       }
 
       .link-title {
-        font-size: 1.2em;
-        font-weight: bold;
         width: 100%;
         overflow: hidden;
       }
