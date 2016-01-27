@@ -40,7 +40,10 @@ pageflow.externalLinks.EditSiteView = Backbone.Marionette.Layout.extend({
       this.input('title', pageflow.TextInputView, {
         required: true
       });
-      this.input('description', pageflow.TextAreaInputView, {size: 'short'});
+      this.input('description', pageflow.TextAreaInputView, {
+        size: 'short',
+        disableLinks: true
+      });
     });
 
     if (this.options.returnTo === 'page' && this.options.page) {
