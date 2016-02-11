@@ -2,9 +2,46 @@
 
 ### Changes on `master`
 
-None so far.
+##### Breaking Changes
+
+- There is now a configurable default theme.
+  ([#24](https://github.com/codevise/pageflow-external-links/pull/24),
+   [#21](https://github.com/codevise/pageflow-external-links/pull/21),
+   [#20](https://github.com/codevise/pageflow-external-links/pull/20))
+
+  If you only use `pageflow/themes/default.scss` in your application,
+  simply add the following line:
+
+        @import "pageflow/external_links/themes/default";
+
+  See the link in the readme, for a complete list of theme settings.
+
+  In case you created a custom theme for this page type, add the
+  following line to the top of your theme stylesheet:
+
+        @import "pageflow/external_links/themes/legacy";
+
+  This ensures that all styles that have been moved to the new default
+  theme from `pageflow/external_links.scss` are still present inside
+  the custom theme.
+
+##### Other Changes
+
+- Flexible height for link boxes
+  ([#18](https://github.com/codevise/pageflow-external-links/pull/18))
+- Disable links inside link description
+  ([#23](https://github.com/codevise/pageflow-external-links/pull/23))
+- Use translations from `pageflow-public-i18n` gem.
+  ([#16](https://github.com/codevise/pageflow-external-links/pull/16),
+   [#19](https://github.com/codevise/pageflow-external-links/pull/19))
+- Publish sassdoc to github pages via travis.
+  ([#22](https://github.com/codevise/pageflow-external-links/pull/22))
+- Add .idea entry to .gitignore
+  ([#17](https://github.com/codevise/pageflow-external-links/pull/17))
 
 ### 0.3.0
+
+2015-10-23
 
 - Site reference input and site selection api.
   ([#15](https://github.com/codevise/pageflow-external-links/pull/15))
