@@ -1,0 +1,32 @@
+.external-links-page {
+  .arrow-forward, .arrow-back {
+    text-decoration: none;
+  }
+
+  .link-item {
+    background-color: rgb(20, 20, 20);
+    background-color: rgba(20, 20, 20, 0.8);
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+      text-decoration: underline;
+      background-color: rgba(20, 20, 20, 1);
+    }
+
+    .link-details {
+      margin: 20px;
+      text-decoration: none;
+      color: #fff;
+
+      p {
+        line-height: 1.3em;
+      }
+
+      .link-title {
+        font-size: 1.2em;
+        font-weight: bold;
+      }
+    }
+  }
+}
