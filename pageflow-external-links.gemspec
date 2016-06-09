@@ -1,8 +1,11 @@
 # coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'pageflow/external_links/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "pageflow-external-links"
-  spec.version       = "0.4.0.alpha"
+  spec.version       = Pageflow::ExternalLinks::VERSION
   spec.authors       = ["Tim Fischbach"]
   spec.email         = ["tfischbach@codevise.de"]
   spec.summary       = "Pageflow Page Type for links to external sites"
@@ -25,4 +28,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rspec-rails", "~> 2.0"
   spec.add_development_dependency 'factory_girl_rails'
   spec.add_development_dependency "sqlite3"
+
+  # Semantic versioning rake tasks
+  spec.add_development_dependency 'semmy', '~> 0.2'
 end
