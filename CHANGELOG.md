@@ -1,13 +1,18 @@
 # CHANGELOG
 
-### Changes on `master`
+### Version 0.4.0
+
+2016-06-09
+
+[Compare changes](https://github.com/codevise/pageflow-external-links/compare/v0.3.0...v0.4.0)
 
 ##### Breaking Changes
 
 - There is now a configurable default theme.
   ([#24](https://github.com/codevise/pageflow-external-links/pull/24),
    [#21](https://github.com/codevise/pageflow-external-links/pull/21),
-   [#20](https://github.com/codevise/pageflow-external-links/pull/20))
+   [#20](https://github.com/codevise/pageflow-external-links/pull/20),
+   [#25](https://github.com/codevise/pageflow-external-links/pull/25))
 
   If you only use `pageflow/themes/default.scss` in your application,
   simply add the following line:
