@@ -32,6 +32,13 @@ Include javascripts and stylesheets:
     # app/assets/stylesheets/pageflow/editor.css.scss
     @import "pageflow/external_links/editor";
 
+If you are using Sass < 3.4, import the legacy theme:
+
+    # app/assets/stylesheets/pageflow/themes/default.css.scss
+    @import "pageflow/external_links/themes/legacy";
+    
+With Sass 3.4 or newer, you can use the default theme:
+
     # app/assets/stylesheets/pageflow/themes/default.css.scss
     @import "pageflow/external_links/themes/default";
 
