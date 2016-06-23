@@ -6,6 +6,9 @@ gemfile: Gemfile.ci
 sudo: false
 cache: bundler
 
+env:
+  - PUBLISH_THEME_DOC=true
+
 before_install:
 - nvm install stable
 
