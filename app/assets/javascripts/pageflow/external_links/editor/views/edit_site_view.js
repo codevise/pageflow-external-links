@@ -35,7 +35,7 @@ pageflow.externalLinks.EditSiteView = Backbone.Marionette.Layout.extend({
           pageId: options.page && options.page.id,
           returnTo: options.returnTo
         },
-        imagePositioning: false
+        positioning: false
       });
       this.input('title', pageflow.TextInputView, {
         required: true
