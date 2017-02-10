@@ -5,7 +5,7 @@ pageflow.ConfigurationEditorView.register('external_links', {
     });
 
     this.tab('files', function() {
-      this.input('background_image_id', pageflow.FileInputView, {collection: pageflow.imageFiles});
+      this.group('background');
       this.input('thumbnail_image_id', pageflow.FileInputView, {
         collection: pageflow.imageFiles,
         positioning: false

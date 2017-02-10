@@ -1,6 +1,6 @@
 /*global IScroll*/
 
-pageflow.pageType.register('external_links', _.extend({
+pageflow.react.registerPageTypeWithDefaultBackground('external_links', {
   prepareNextPageTimeout: 0,
 
   enhance: function(pageElement, configuration) {
@@ -107,10 +107,6 @@ pageflow.pageType.register('external_links', _.extend({
   prepare: function(pageElement, configuration) {
   },
 
-  preload: function(pageElement, configuration) {
-    return pageflow.preload.backgroundImage(pageElement.find('.background_image'));
-  },
-
   activating: function(pageElement, configuration) {
     this.linkScroller.refresh();
     this.linkScroller.checkDisable();
@@ -132,8 +128,6 @@ pageflow.pageType.register('external_links', _.extend({
     pageElement.find('h2 .subtitle').text(configuration.get('subtitle') || '');
     pageElement.find('.contentText p').html(configuration.get('text') || '');
 
-    this.updateCommonPageCssClasses(pageElement, configuration);
-
     pageElement.find('.shadow').css({
       opacity: configuration.get('gradient_opacity') / 100
     });
@@ -144,15 +138,10 @@ pageflow.pageType.register('external_links', _.extend({
 
   embeddedEditorViews: function() {
     return {
-      '.background_image': {
-        view: pageflow.BackgroundImageEmbeddedView,
-        options: {propertyName: 'background_image_id'}
-      },
-
       '.ext-links': {
         view: pageflow.externalLinks.ListEmbeddedView,
         options: {propertyName: 'linked_external_site_perma_ids'}
       }
     };
   }
-}, pageflow.commonPageCssClasses));
+});
