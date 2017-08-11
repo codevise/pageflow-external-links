@@ -15,7 +15,7 @@ Add this line to your application's `Gemfile`:
 Register the page type inside the configure block in `config/initializers/pageflow.rb`
 
     Pageflow.configure do |config|
-      config.page_types.register(Pageflow::ExternalLinks.page_type)
+      config.plugin(Pageflow::ExternalLinks.plugin)
     end
 
 Include javascripts and stylesheets:
