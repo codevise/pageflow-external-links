@@ -26,26 +26,26 @@ Include javascripts and stylesheets:
     # app/assets/javascripts/pageflow/editor.js
     //= require pageflow/external_links/editor
 
-    # app/assets/stylesheets/pageflow/application.css.scss
+    # app/assets/stylesheets/pageflow/application.scss
     @import "pageflow/external_links";
 
-    # app/assets/stylesheets/pageflow/editor.css.scss
+    # app/assets/stylesheets/pageflow/editor.scss
     @import "pageflow/external_links/editor";
 
 If you are using Sass < 3.4, import the legacy theme:
 
-    # app/assets/stylesheets/pageflow/themes/default.css.scss
+    # app/assets/stylesheets/pageflow/themes/default.scss
     @import "pageflow/external_links/themes/legacy";
-    
+
 With Sass 3.4 or newer, you can use the default theme:
 
-    # app/assets/stylesheets/pageflow/themes/default.css.scss
+    # app/assets/stylesheets/pageflow/themes/default.scss
     @import "pageflow/external_links/themes/default";
 
 Mount the routes in `config/routes.rb`:
 
     authenticated do
-      mount Pageflow::ExternalLinks::Engine, :at => '/external_links'
+      mount Pageflow::ExternalLinks::Engine, at: '/external_links'
     end
 
 Install dependencies:
@@ -65,9 +65,9 @@ Restart the application server.
 ## Troubleshooting
 
 If you run into problems while installing the page type, please also refer to the
-[Troubleshooting](https://github.com/codevise/pageflow/wiki/Troubleshooting) wiki 
-page in the [Pageflow  repository](https://github.com/codevise/pageflow). If that 
-doesn't help, consider 
+[Troubleshooting](https://github.com/codevise/pageflow/wiki/Troubleshooting) wiki
+page in the [Pageflow  repository](https://github.com/codevise/pageflow). If that
+doesn't help, consider
 [filing an issue](https://github.com/codevise/pageflow-external-links/issues).
 
 ## Contributing Locales
