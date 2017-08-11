@@ -25,5 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rake', '~> 12.0'
 
   # Semantic versioning rake tasks
-  spec.add_development_dependency 'semmy', '~> 0.2'
+  spec.add_development_dependency 'semmy', '~> 1.0'
 end
