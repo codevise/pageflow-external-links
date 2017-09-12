@@ -12,10 +12,11 @@ Add this line to your application's `Gemfile`:
 
     gem 'pageflow-external-links'
 
-Register the page type inside the configure block in `config/initializers/pageflow.rb`
+Register the page type and the plugin inside the configure block in `config/initializers/pageflow.rb`
 
     Pageflow.configure do |config|
       config.register_page_type(Pageflow::ExternalLinks::PageType.new)
+      config.plugin(Pageflow::ExternalLinks.plugin)
     end
 
 Include javascripts and stylesheets:
