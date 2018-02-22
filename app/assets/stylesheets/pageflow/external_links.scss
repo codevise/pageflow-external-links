@@ -5,7 +5,7 @@
   .ext-links {
     pointer-events: all;
     position: relative;
-    margin-left: -10px;
+    @include margin-start(-10px);
     @include transition(opacity 0.5s);
 
     .hideText & {
@@ -34,8 +34,6 @@
     text-decoration: none;
 
     &:before {
-      content: "\f105";
-      font-family: "FontAwesome";
       color: white;
       width: 100%;
       position: absolute;
@@ -66,19 +64,30 @@
     }
   }
 
-  .arrow-back {
+  .arrow-forward {
+    @include float-end;
 
-    &:before {
-      content: "\f104";
+    @include dir-ltr {
+      @include fa-angle-right-icon;
+    }
+
+    @include dir-rtl {
+      @include fa-angle-left-icon;
     }
   }
-  .arrow-forward {
-    float: right;
+
+  .arrow-back {
+    @include dir-ltr {
+      @include fa-angle-left-icon;
+    }
+
+    @include dir-rtl {
+      @include fa-angle-right-icon;
+    }
   }
 
   #horizontal_scroller {
     position: absolute;
-    text-align: center;
 
     .js & {
       white-space: nowrap;
@@ -102,7 +111,6 @@
     max-width: 250px;
     vertical-align: top;
     overflow: hidden;
-    text-align: left;
     margin-right: 10px;
     @include transition(0.3s);
 
