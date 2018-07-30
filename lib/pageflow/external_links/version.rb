@@ -1,5 +1,5 @@
 module Pageflow
   module ExternalLinks
-    VERSION = '1.1.0.dev'.freeze
+    VERSION = '2.0.0.dev'.freeze
   end
 end
