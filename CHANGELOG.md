@@ -1,8 +1,10 @@
 # CHANGELOG
 
-### Unreleased Changes
+### Version 2.0.0.beta1
 
-[Compare changes](https://github.com/codevise/pageflow-external-links/compare/1-x-stable...master)
+2018-07-31
+
+[Compare changes](https://github.com/codevise/pageflow-external-links/compare/1-x-stable...v2.0.0.beta1)
 
 None so far.
 
