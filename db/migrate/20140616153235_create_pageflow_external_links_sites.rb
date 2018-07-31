@@ -1,4 +1,4 @@
-class CreatePageflowExternalLinksSites < ActiveRecord::Migration
+class CreatePageflowExternalLinksSites < ActiveRecord::Migration[4.2]
   def change
     create_table :pageflow_external_links_sites do |t|
       t.integer :perma_id
