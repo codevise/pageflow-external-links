@@ -1,12 +1,15 @@
 # CHANGELOG
 
-### Version 2.0.0.beta1
+### Version 2.0.0
 
 2018-07-31
 
-[Compare changes](https://github.com/codevise/pageflow-external-links/compare/1-x-stable...v2.0.0.beta1)
+[Compare changes](https://github.com/codevise/pageflow-external-links/compare/1-x-stable...v2.0.0)
 
-None so far.
+- Upgrade to Rails 5/Pageflow 13
+  ([#37](https://github.com/codevise/pageflow-external-links/pull/37))
+- Fix template file extension
+  ([#38](https://github.com/codevise/pageflow-external-links/pull/38))
 
 See
 [1-x-stable branch](https://github.com/codevise/pageflow-external-links/blob/1-x-stable/CHANGELOG.md)
