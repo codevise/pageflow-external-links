@@ -13,4 +13,5 @@ before_install:
 - nvm install stable
 
 script:
+- bin/rspec
 - bundle exec publish-pageflow-theme-doc
