@@ -1,6 +1,7 @@
 # Pageflow External Links
 
 [![Gem Version](https://badge.fury.io/rb/pageflow-external-links.svg)](http://badge.fury.io/rb/pageflow-external-links)
+[![Build Status](https://travis-ci.org/codevise/pageflow-external-links.svg?branch=master)](https://travis-ci.org/codevise/pageflow-external-links)
 
 Page type to display links to external pages.
 
