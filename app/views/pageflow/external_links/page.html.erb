@@ -1,25 +1,16 @@
-<div class="blackLayer"></div>
+<div class="black_layer"></div>
 <div class="content_and_background external-links-page">
-  <div class="backgroundArea">
-    <%= page_background_asset(configuration) %>
+  <div class="page_background">
+    <%= page_background_asset(page) %>
     <%= shadow_div :opacity => configuration['gradient_opacity'] %>
   </div>
 
   <div class="content">
     <div class="scroller">
       <div>
-        <div class="contentWrapper">
-          <div class="page_header">
-            <h2>
-              <span class="tagline"><%= configuration['tagline'] %></span>
-              <span class="title"><%= configuration['title'] %></span>
-              <span class="subtitle"><%= configuration['subtitle'] %></span>
-            </h2>
-            <%= background_image_tag(configuration['background_image_id'], {"class" => "print_image"}) %>
-          </div>
-          <div class="contentText">
-            <p><%= raw configuration['text'] %></p>
-          </div>
+        <div class="content_wrapper">
+          <%= page_default_content(page) %>
+
           <div class="ext-links" id="ext-links">
             <div id="horizontal_scroller">
               <%= render Pageflow::ExternalLinks::Site.from_perma_ids(@entry.try(:revision), configuration['linked_external_site_perma_ids']) %>
