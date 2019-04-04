@@ -1,13 +1,13 @@
 /*global IScroll*/
 
-pageflow.react.registerPageTypeWithDefaultBackground('external_links', {
+pageflow.react.registerPageTypeWithDefaultBackground('external_links', _.extend({
   prepareNextPageTimeout: 0,
 
   enhance: function(pageElement, configuration) {
     var scrollerElement = pageElement.find('.ext-links'),
         that = this,
         innerScroller = pageElement.find('#horizontal_scroller'),
-        contentWrapper = pageElement.find('.contentWrapper');
+        contentWrapper = pageElement.find('.content_wrapper');
 
     this.linkScroller = new IScroll(scrollerElement[0], {
       mouseWheel: true,
@@ -123,10 +123,7 @@ pageflow.react.registerPageTypeWithDefaultBackground('external_links', {
   },
 
   update: function(pageElement, configuration) {
-    pageElement.find('h2 .tagline').text(configuration.get('tagline') || '');
-    pageElement.find('h2 .title').text(configuration.get('title') || '');
-    pageElement.find('h2 .subtitle').text(configuration.get('subtitle') || '');
-    pageElement.find('.contentText p').html(configuration.get('text') || '');
+    this.updateDefaultPageContent(pageElement, configuration);
 
     pageElement.find('.shadow').css({
       opacity: configuration.get('gradient_opacity') / 100
@@ -144,4 +141,4 @@ pageflow.react.registerPageTypeWithDefaultBackground('external_links', {
       }
     };
   }
-});
+}, pageflow.defaultPageContent));
