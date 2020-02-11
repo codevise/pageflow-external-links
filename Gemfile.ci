@@ -3,3 +3,6 @@ source 'https://rubygems.org'
 gemspec
 
 gem 'pageflow-theme-doc-publisher', git: 'https://github.com/tf/pageflow-theme-doc-publisher'
+
+# Give a hint to Bundler to prevent endless loop
+gem 'rails', '~> 5.2.0'
