@@ -1,5 +1,14 @@
 # CHANGELOG
 
+### Version 2.2.1
+
+2020-02-11
+
+[Compare changes](https://github.com/codevise/pageflow-external-links/compare/v2.2.0...v2.2.1)
+
+- Prevent error with missing site urls in Pageflow 15.1
+  ([#45](https://github.com/codevise/pageflow-external-links/pull/45))
+
 ### Version 2.2.0
 
 2019-11-04
