@@ -38,6 +38,9 @@ $external-links-item-hover-underline: true !default;
 /// Padding around the text inside an item.
 $external-links-item-padding: 20px !default;
 
+/// Border radius of items.
+$external-links-item-border-radius: null !default;
+
 @include pageflow-page-type-pictograms("external_links");
 
 .external-links-page {
@@ -45,6 +48,7 @@ $external-links-item-padding: 20px !default;
     background-color: $external-links-item-background-color;
     color: $external-links-item-text-color;
     text-decoration: none;
+    border-radius: $external-links-item-border-radius;
 
     &:hover {
       background-color: $external-links-item-active-background-color;
