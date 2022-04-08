@@ -7,7 +7,7 @@
   .manage_external_sites {
     a.add {
       @include plus-circled-icon;
-      @include icon-button;
+      @include icon-button("primary");
       position: absolute;
       top: 0;
       right: 0;
@@ -25,38 +25,40 @@
   }
 
   a.remove {
-    @include icon-only-button(#aaa);
+    @include icon-only-button("destructive");
     @include trash-icon;
     position: absolute;
     right: 4px;
-    top: 4px;
+    top: 3px;
   }
 
   a.edit {
-    @include icon-only-button(#aaa);
+    @include icon-only-button;
     @include pencil-icon;
     position: absolute;
     right: 40px;
-    top: 4px;
+    top: 3px;
   }
 
   .external_links_site_reference {
     margin-bottom: 2px;
 
     > a:first-child {
+      position: relative;
       padding-left: 45px;
       cursor: default;
+      text-decoration: none;
     }
 
     .thumbnail {
       position: absolute;
       top: 0;
       left: 0;
-      height: 35px;
+      height: 100%;
       width: 35px;
       cursor: move;
       background-size: cover;
-      background-color: #444;
+      background-color: var(--ui-on-surface-color-light);
     }
   }
 }
