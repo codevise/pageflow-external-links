@@ -3,7 +3,9 @@ ul.external_sites {
 
   > li {
     position: relative;
-    background-color: #eee;
+    background-color: var(--ui-primary-color-lightest);
+    border-radius: rounded();
+    overflow: hidden;
     margin-bottom: 2px;
     padding: 37px 10px 0 70px;
     white-space: nowrap;
@@ -11,9 +13,8 @@ ul.external_sites {
     height: 23px;
 
     &.navigatable {
-      background-color: #fff;
       @include right-open-icon;
-      @include background-icon-right($color: #888, $top: 20px);
+      @include background-icon-right($color: var(--ui-primary-color-light), $top: 20px);
     }
   }
 
@@ -25,11 +26,11 @@ ul.external_sites {
     width: 60px;
     vertical-align: middle;
     background-size: cover;
-    background-color: #444;
+    background-color: var(--ui-on-surface-color-light);
   }
 
   a.select {
-    @include button(#590);
+    @include simple-button("primary");
 
     padding-left: 5px;
     padding-right: 5px;

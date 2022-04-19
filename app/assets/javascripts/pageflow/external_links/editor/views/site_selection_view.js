@@ -1,5 +1,5 @@
 pageflow.externalLinks.SiteSelectionView = Backbone.Marionette.ItemView.extend({
-  className: 'external_site_selection dialog',
+  className: 'external_site_selection dialog editor',
   template: 'pageflow/external_links/editor/templates/site_selection',
 
   mixins: [pageflow.dialogView],
