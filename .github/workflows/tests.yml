@@ -1,0 +1,6 @@
+name: tests
+on: [push, pull_request]
+
+jobs:
+  call-workflow:
+    uses: codevise/pageflow/.github/workflows/reusable-workflow-rspec.yml@master
