@@ -4,11 +4,11 @@ module Pageflow
       name 'external_links'
 
       def revision_components
-        [Site]
+        [ExternalLinks::Site]
       end
 
       def view_helpers
-        [SitesHelper]
+        [ExternalLinks::SitesHelper]
       end
     end
   end
