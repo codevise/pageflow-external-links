@@ -1,4 +1,5 @@
 require 'pageflow/external_links/engine'
+require 'pageflow/external_links/version'
 
 module Pageflow
   module ExternalLinks
