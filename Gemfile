@@ -8,7 +8,4 @@ if ENV['PAGEFLOW_DEPENDENCIES'] == 'experimental'
     gem 'pageflow'
     gem 'pageflow-support'
   end
-else
-  # Give a hint to Bundler to prevent endless loop
-  gem 'rails', '~> 5.2.0'
 end
